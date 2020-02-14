@@ -1,0 +1,38 @@
+{
+    "parser": "babel-eslint",
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true
+    },
+    "extends": [
+        "plugin:prettier/recommended",
+        "@gracious/eslint-config-gracious",
+        "plugin:react/recommended"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "sourceType": "module"
+    },
+    "plugins": ["react", "react-hooks"],
+    "overrides": [
+        {
+            "files": ["pages/**/*.{js,jsx}"]
+        }
+    ],
+    "rules": {
+        "no-console": "warn",
+        "no-unused-vars": "error",
+        "react/react-in-jsx-scope": "off",
+        "indent": "off",
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn"
+    },
+    "settings": {
+        "react": {
+            "version": "16.12.0"
+        }
+    }
+}

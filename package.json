@@ -7,19 +7,53 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "lint": "npm run eslint && npm run stylelint",
+    "eslint": "eslint --ignore-path .gitignore \"**/*.{js,jsx}\"",
+    "stylelint": "stylelint --ignore-path .gitignore \"**/*.{js,jsx}\"",
+    "prettier:check": "prettier --ignore-path .gitignore --check \"**/*.{js,jsx}\"",
+    "prettier:format": "prettier --ignore-path .gitignore --write \"**/*.{js,jsx,json}\""
   },
   "dependencies": {
+    "apollo-boost": "^0.4.4",
+    "babel-plugin-styled-components": "^1.10.6",
     "gatsby": "^2.18.4",
+    "gatsby-plugin-graphql-codegen": "^2.2.2",
+    "gatsby-plugin-styled-components": "^3.1.14",
+    "gatsby-source-graphql": "^2.1.25",
+    "graphql-tag": "^2.10.1",
+    "isomorphic-fetch": "^2.2.1",
+    "prop-types": "^15.7.2",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-apollo": "^3.1.3",
+    "react-dom": "^16.12.0",
+    "styled-components": "^4.4.1",
+    "styled-normalize": "^8.0.6"
   },
   "devDependencies": {
-    "prettier": "^1.19.1"
+    "@gracious/eslint-config-gracious": "^1.0.2",
+    "@gracious/stylelint-config-gracious": "^1.1.1",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-loader": "^3.0.3",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "gatsby-plugin-eslint": "^2.0.8",
+    "gatsby-plugin-stylelint": "^3.2.0",
+    "prettier": "^1.19.1",
+    "stylelint": "^13.1.0",
+    "stylelint-config-prettier": "^8.0.1",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-prettier": "^1.1.2",
+    "stylelint-processor-styled-components": "^1.9.0",
+    "stylelint-webpack-plugin": "^1.2.3"
   },
   "repository": {
     "type": "git",
